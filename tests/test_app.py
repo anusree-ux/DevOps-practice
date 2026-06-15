@@ -5,7 +5,7 @@ def test_home_route():
     with app.test_client() as client:
         response = client.get('/')
         assert response.status_code == 200
-        assert response.data == b"Hello from CI Pipeline!"
+        assert response.data == b"WRONG RESPONSE"  # This will fail!
 
 def test_app_exists():
     """Test that Flask app object exists"""
